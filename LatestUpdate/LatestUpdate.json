@@ -29,12 +29,12 @@
     "Download" : "https://www.catalog.update.microsoft.com/DownloadDialog.aspx"
   },
   "UpdateFeeds" : {
-    "Windows10" : "https://support.microsoft.com/app/content/api/content/feeds/sap/en-us/6ae59d69-36fc-8e4d-23dd-631d98bf74a9/atom",
-    "Windows8" : "https://support.microsoft.com/app/content/api/content/feeds/sap/en-us/b905caa1-d413-c90c-bed3-20aead901092/atom",
-    "Windows7" : "https://support.microsoft.com/app/content/api/content/feeds/sap/en-us/f825ca23-c7d1-aab8-4513-64980e1c3007/atom",
-    "WindowsServer" : "https://support.microsoft.com/app/content/api/content/feeds/sap/en-us/6ae59d69-36fc-8e4d-23dd-631d98bf74a9/atom",
-    "NetFramework" : "https://support.microsoft.com/app/content/api/content/feeds/sap/en-us/df2c02f6-9610-d46d-2d76-fa570bd8c86a/atom",
-    "WindowsDefender" : "https://support.microsoft.com/app/content/api/content/feeds/sap/en-au/5d4715e7-a9c9-378e-3f83-fd410db4ef0a/atom"
+    "Windows10" : "https://support.microsoft.com/en-us/feed/atom/6ae59d69-36fc-8e4d-23dd-631d98bf74a9",
+    "Windows8" : "https://support.microsoft.com/en-us/feed/atom/b905caa1-d413-c90c-bed3-20aead901092",
+    "Windows7" : "https://support.microsoft.com/en-us/feed/atom/f825ca23-c7d1-aab8-4513-64980e1c3007",
+    "WindowsServer" : "https://support.microsoft.com/en-us/feed/atom/6ae59d69-36fc-8e4d-23dd-631d98bf74a9",
+    "NetFramework" : "https://support.microsoft.com/en-us/feed/atom/df2c02f6-9610-d46d-2d76-fa570bd8c86a",
+    "WindowsDefender" : "https://support.microsoft.com/en-us/feed/atom/5d4715e7-a9c9-378e-3f83-fd410db4ef0a"
   },
   "VersionTable" : {
     "Windows10Builds" : {
