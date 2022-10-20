@@ -22,11 +22,11 @@ Function Get-UpdateCumulative {
     [regex] $rxB = "$Build.(\d+)"
     $updateList = New-Object -TypeName System.Collections.ArrayList
     ForEach ($item in $UpdateFeed.feed.entry) {
-        If ($item.title -match $rxB) {
-            Write-Verbose -Message "$($MyInvocation.MyCommand): matched item [$($item.title)]"
-            $BuildVersion = [regex]::Match($item.title, $rxB).Value
+        If ($item.title.'#text' -match $rxB) {
+            Write-Verbose -Message "$($MyInvocation.MyCommand): matched item [$($item.title.'#text')]"
+            $BuildVersion = [regex]::Match($item.title.'#text', $rxB).Value
             $PSObject = [PSCustomObject] @{
-                Title   = $item.title
+                Title   = $item.title.'#text'
                 ID      = $item.id
                 Build   = $BuildVersion
                 Updated = $item.updated
@@ -41,7 +41,7 @@ Function Get-UpdateCumulative {
         ForEach ($update in $updateList) {
             $PSObject = [PSCustomObject] @{
                 Title    = $update.title
-                ID       = "KB{0}" -f ($update.id).Split(":")[2]
+                ID       = ($update.title).Split(" —")[3]
                 Build    = $update.Build.Split(".")[0]
                 Revision = [int]($update.Build.Split(".")[1])
                 Updated  = ([DateTime]::Parse($update.updated))
